@@ -17,3 +17,5 @@ A fun new app for social blogging
 smile face
 
 updated....
+
+cam making changes
