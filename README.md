@@ -1,6 +1,8 @@
 # New-n-Improved TWITTER
 
-## A fun new app for social blogging
+A fun new app for social blogging
+
+## What we have to offer
 
 - connect with people/brands on a more personal level
 
@@ -11,3 +13,5 @@
 * find, discuss, discover new ideas or opinions
 
 - advertise products and services
+
+updated....
