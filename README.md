@@ -13,9 +13,3 @@ A fun new app for social blogging
 * find, discuss, discover new ideas or opinions
 
 - advertise products and services
-
-smile face
-
-updated....
-
-cam making changes
