@@ -14,4 +14,6 @@ A fun new app for social blogging
 
 - advertise products and services
 
+smile face
+
 updated....
