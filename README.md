@@ -15,3 +15,5 @@ A fun new app for social blogging
 - advertise products and services
 
 updated....
+
+cam making changes
