@@ -10,6 +10,7 @@ const PORT = process.env.PORT;
 // Initialize the app object.
 const app = express();
 
+// Create a homepage route.
 app.get("/", function (req, res) {
   res.send("Welcome to TWITTER");
 });
@@ -31,5 +32,3 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
-
-// Create a homepage route.
