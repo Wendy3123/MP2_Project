@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Error404 from './Error404';
 
 function App() {
   return (

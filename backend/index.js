@@ -14,6 +14,8 @@ app.get("/", function (req, res) {
   res.send("Welcome to TWITTER");
 });
 
+
+
 //POST ROUTE
 const postsController = require("./controllers/posts_controller.js");
 app.use("/posts", postsController);
