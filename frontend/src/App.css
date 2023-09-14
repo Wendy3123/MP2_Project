@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.logo {
+  width: 73px;
+  height: 73px;
+  border-radius: 90px;
+  position: absolute;
+  top: 5px;
+  left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(184, 58, 121);
+}
+
+.frontPagepic {
+  width: 700px;
+  height: 400px;
+}
