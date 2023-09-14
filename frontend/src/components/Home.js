@@ -1,10 +1,10 @@
 import React from "react";
 import NavBar from "./NavBar";
 
-function Home({ headerStyle }) {
+function Home() {
   return (
     <div>
-      <h1 style={headerStyle}>
+      <h1 className="h1Tag">
         <img src="./LOGO.png" alt="brand logo" className="logo"></img>
         WELCOME TO TWITTER
       </h1>

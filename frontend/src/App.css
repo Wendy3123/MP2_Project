@@ -55,3 +55,10 @@ a {
   width: 700px;
   height: 400px;
 }
+
+.h1Tag {
+  background: linear-gradient(27deg, #7928ca, #ff0080);
+  font-size: 52px;
+  margin: auto;
+  padding: 10px 0 10px 0;
+}

@@ -1,10 +1,14 @@
-import { Stack, Typography } from "@mui/material";
+import React from "react";
+import NavBar from "../components/NavBar";
 
 function Post() {
   return (
-    <Stack>
-      <Typography>Post Form</Typography>
-    </Stack>
+    <div>
+      <h1 className="h1Tag">
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>View Posts
+      </h1>
+      <NavBar />
+    </div>
   );
 }
 
