@@ -13,7 +13,7 @@ function AboutUs() {
       <div>
         <div className="CBox">
           <img
-            src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"
+            src="https://img.freepik.com/free-vector/young-woman-pink-dress-smiling_1450-140.jpg"
             alt=" pic of staff"
             className="Cimage"
           ></img>
