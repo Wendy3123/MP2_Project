@@ -62,7 +62,6 @@ a {
   margin: auto;
   padding: 10px 0 10px 0;
 }
-<<<<<<< HEAD
 
 .form1 {
   margin-top: 30px;
@@ -88,15 +87,13 @@ a {
   height: 25px;
   gap: 10px;
 }
-=======
-.CBox{
+.CBox {
   border: solid 1px black;
   border-radius: 3px;
 }
-.Cimage{
+.Cimage {
   height: 200px;
 }
-.Cpara{
+.Cpara {
   font-size: 18px;
 }
->>>>>>> 9a93dd659c2cd40ce6d7b56bf45d65f75098a7f6
