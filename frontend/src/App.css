@@ -62,3 +62,28 @@ a {
   margin: auto;
   padding: 10px 0 10px 0;
 }
+
+.form1 {
+  margin-top: 30px;
+}
+
+.form1input {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  color: rgb(139, 72, 123);
+}
+
+.form1label {
+  padding: 0 0 0 10px;
+  display: flex;
+  width: 30%;
+}
+
+.CreatePostBtn {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  height: 25px;
+  gap: 10px;
+}
