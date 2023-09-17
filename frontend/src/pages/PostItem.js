@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../context";
 
 function PostItem({ item }) {
-  const { IndividualPostInfoById } = useContext(Context);
+  const { IndividualPostInfoById, deleteSinglePost } = useContext(Context);
   const { author, img_URL, caption, _id } = item; //we pass _id in here to so we can access the current id from mongodb
   return (
     <div className="PostContainer">
@@ -20,7 +20,14 @@ function PostItem({ item }) {
             See Post
           </button>
           <button className="PostItemBtnMid">Edit</button>
-          <button className="PostItemBtnRight">Delete</button>
+          <button
+            className="PostItemBtnRight"
+            onClick={() => {
+              deleteSinglePost(_id);
+            }}
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
