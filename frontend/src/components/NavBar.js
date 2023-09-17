@@ -24,16 +24,3 @@ export default function NavBar() {
     </nav>
   );
 }
-
-// function Navbar() {
-//   return (
-//     <Stack>
-//       <Box>
-//         <Link to={"/"}>Home</Link>
-//         <Link to={"/AllPosts"}>All Posts</Link>
-//       </Box>
-//     </Stack>
-//   );
-// }
-
-// export default Navbar;
