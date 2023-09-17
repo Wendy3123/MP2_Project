@@ -19,39 +19,43 @@ function AboutUs() {
           ></img>
           <h3>Wendy Wang</h3>
           <p className="Cpara">
-            Looking for someone with initiative and who is willing to step up to
-            the plate look no futher then her{" "}
+            Wendy wang is a accomplished full stack developer with 10 years of experience. Today she is a 
+            facult member at Havard, Yufts and Boston University where she teachecs advance algorithms and prepares students for graduation.{" "}
           </p>
+          <link href="https://github.com/Wendy3123"></link>
         </div>
 
         <div className="CBox">
           <img
-            src="https://th.bing.com/th/id/OIF.6NaRbdglMBfik6aCT6ECxw?pid=ImgDet&rs=1"
+            src="https://clipground.com/images/boy-with-glasses-clipart-1.jpg"
             alt=" pic of staff"
             className="Cimage"
           ></img>
           <h3>John Lema</h3>
-          <p className="Cpara">This is placeholder</p>
+          <p className="Cpara">John Lema is a seasoned database analyst who work for such notibale companys such as,
+          Apple, spotify and is now taking charge at a seinor position at amazon.</p>
         </div>
 
         <div className="CBox">
           <img
-            src="https://www.real-fix.com/wp-content/uploads/2016/10/SWNS_CUTE_DOG_04.jpg"
+            src="https://th.bing.com/th/id/R.604043513ece65599eaed1851f1239d3?rik=JVt5%2bP7EFXTFJw&riu=http%3a%2f%2fclipart-library.com%2fnewimages%2fboy-clipart-2.jpg&ehk=mVKygMz28vPLbOte8OiFNAxKmRhWWn0WDeYd4Im0dd4%3d&risl=&pid=ImgRaw&r=0"
             alt=" pic of staff"
             className="Cimage"
           ></img>
           <h3>Mike Guzman</h3>
-          <p className="Cpara">this is placeholder</p>
+          <p className="Cpara">Mike Guzman is a established backend developer with 15 years of experience for being a part of the
+          well know luxury brand Hermes but now is the head of infrastructure at Ferrari.</p>
         </div>
 
         <div className="CBox">
           <img
-            src="https://th.bing.com/th/id/R.2bf04a9aaf3d9624a0aebc249bbf550e?rik=PMR2L6J2USnQxg&pid=ImgRaw&r=0"
+            src="https://i.graphicmama.com/uploads/2019/5/5cf0d8e42e3d5-african-american-school-girl-cartoon-vector-character-1.png"
             alt=" pic of staff"
             className="Cimage"
           ></img>
           <h3>Cameron Mency</h3>
-          <p className="Cpara">This is placeholder</p>
+          <p className="Cpara">Cameron Mency is detecated frontend developer whos work with goverment institutions
+          20 years but now works with vairous non profit orginzations around the world.</p>
         </div>
       </div>
     </div>
