@@ -21,12 +21,12 @@ const formFields = [
 ];
 
 function Form() {
-  const { form, setForm, savePostsToDatabase } = useContext(Context);
+  const { form, setForm, savePostsToDatabase, isEdit } = useContext(Context);
   return (
     <div>
       <h1 className="h1Tag">
-        <img src="./LOGO.png" alt="brand logo" className="logo"></img>Create A
-        Post
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>
+        {isEdit ? "Edit A Post" : "Create A Post"}
       </h1>
       <NavBar />
       <form onSubmit={savePostsToDatabase}>
@@ -52,7 +52,7 @@ function Form() {
 
         <div className="CreatePostBtn">
           {/* change type to submit for button submit so it also renders the submit function when clicked */}
-          <button>Create New Post</button>
+          <button>{isEdit ? "Add Edit" : "Create New Post"}</button>
           <button>Cancel</button>
         </div>
       </form>

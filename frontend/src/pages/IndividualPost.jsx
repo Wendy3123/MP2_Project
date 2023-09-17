@@ -10,7 +10,7 @@ function IndividualPost() {
   return (
     <div>
       <h1 className="h1Tag">
-        <img src="./LOGO.png" alt="brand logo" className="logo"></img>Create A
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>Individual
         Post
       </h1>
       <NavBar />

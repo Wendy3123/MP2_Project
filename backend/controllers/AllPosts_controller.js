@@ -41,8 +41,8 @@ AllPosts.post("/", async (req, res) => {
   }
 });
 
-//update a specific post --> patch method
-AllPosts.patch("/id", async (req, res) => {
+//update a specific post --> put method
+AllPosts.put("/:id", async (req, res) => {
   const { id } = req.params;
   const { author, img_URL, caption } = req.body; //the new values we want to update based on this
 
@@ -50,7 +50,7 @@ AllPosts.patch("/id", async (req, res) => {
     //check whether the id is valid by comparing it to the mongoose auto assigned ObjectId to every data we create in mongodb database
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res
-        .send(404)
+        .status(404)
         .send(`No post is found with${id}! Please try again🤪`);
     }
     //now update the values above
@@ -59,6 +59,7 @@ AllPosts.patch("/id", async (req, res) => {
     const updatedPost = { author, img_URL, caption, _id: id };
 
     await post.findByIdAndUpdate(id, updatedPost, { new: true }); //we pass the new is true bc it is an updated post from previous post
+    res.json({ message: "Post is UPDATED successfully" });
   } catch (error) {
     console.log(error.messsage);
     res.send(500).json({ errorInfo: error.message }); //500 means the server encountered an unexpected condition that prevented it from fulfilling the request
@@ -72,13 +73,12 @@ AllPosts.delete("/:id", async (req, res) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       //same as above check if id is valid match to our database
       return res
-        .send(404)
+        .status(404)
         .send(`No post is found with${id}! Please try again🤪`);
     }
     await post.findByIdAndDelete(id); //find and delete id
-    res.send(200).json({ message: "Post is deleted successfully" }); //send a message for successful completion
+    res.json({ message: "Post is deleted successfully" }); //send a message for successful completion
   } catch (error) {
-    console.log(error.messsage);
     res.send(500).json({ errorInfo: error.message }); //500 means the server encountered an unexpected condition that prevented it from fulfilling the request
   }
 });
