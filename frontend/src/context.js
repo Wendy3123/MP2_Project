@@ -46,18 +46,19 @@ const GlobalState = ({ children }) => {
     }
   }, [isPostSavedSuccessfully, navigate]);
 
+  async function getListOfPosts() {
+    const apiRes = await fetch("http://localhost:3000/AllPosts");
+    const result = await apiRes.json();
+    console.log(result);
+    if (result && result.length > 0) {
+      //if result is tru and result.length is greater than 0
+      setPosts(result);
+    }
+  }
+
   useEffect(() => {
     if (location.pathname === "/AllPosts") {
       setIsPostSavedSuccessfully(false);
-      async function getListOfPosts() {
-        const apiRes = await fetch("http://localhost:3000/AllPosts");
-        const result = await apiRes.json();
-        console.log(result);
-        if (result && result.length > 0) {
-          //if result is tru and result.length is greater than 0
-          setPosts(result);
-        }
-      }
       getListOfPosts();
     }
   }, [setPosts, location]); //the second argument is [] which menas on pageload it loads once and thats it
@@ -75,6 +76,21 @@ const GlobalState = ({ children }) => {
     }
   }
 
+  async function deleteSinglePost(getCurrentId) {
+    console.log(getCurrentId);
+    const apiRes = await fetch(
+      `http://localhost:3000/AllPosts/${getCurrentId}`,
+      {
+        method: "DELETE",
+      }
+    );
+    console.log(apiRes);
+    if (apiRes.ok) {
+      //if api.Res.ok is true call the posts api to get updated list of posts
+      getListOfPosts(); //we made this function earlier to fetch from the new post after delete from mongodb
+    }
+  }
+
   return (
     <Context.Provider
       value={{
@@ -87,6 +103,7 @@ const GlobalState = ({ children }) => {
         savePostsToDatabase,
         IndividualPostInfoById,
         individualPostInfo,
+        deleteSinglePost,
       }}
     >
       {children}

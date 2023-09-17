@@ -10,14 +10,11 @@ function IndividualPost() {
   return (
     <div>
       <h1 className="h1Tag">
-        <img
-          src="{require('./public/LOGO.png')}"
-          alt="brand logo"
-          className="logo"
-        ></img>
-        Individual Post
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>Create A
+        Post
       </h1>
       <NavBar />
+
       <div className="PostContainer">
         <div className="PostBox">
           <img src={img_URL} alt=" pic of staff" className="Postimage"></img>
