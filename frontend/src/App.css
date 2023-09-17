@@ -88,12 +88,39 @@ a {
   gap: 10px;
 }
 .CBox {
-  border: solid 1px black;
+  border: solid 3px rgb(173, 72, 165);
   border-radius: 3px;
+  padding-top: 10px;
+  margin: 10px 10vw 10px 10vw;
 }
 .Cimage {
   height: 200px;
+  width: 200px;
 }
 .Cpara {
   font-size: 18px;
+  color: #93285d;
+}
+
+.PostContainer {
+  border: solid rgb(173, 72, 165) 2px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 5vw;
+}
+
+.PostBox {
+}
+
+.Postimage {
+  width: 210px;
+  height: 210px;
+  padding-top: 10px;
+}
+.Postpara {
+  display: flex;
+  flex-wrap: wrap;
+  width: 310px;
+  height: 50px;
+  justify-content: center;
 }

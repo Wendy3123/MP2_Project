@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import NavBar from "../components/NavBar";
+import { Context } from "../context";
 
 const formFields = [
   {
@@ -9,7 +10,7 @@ const formFields = [
   },
   {
     id: "img_URL",
-    type: "text",
+    type: "URL",
     label: "Image URL",
   },
   {
@@ -19,7 +20,8 @@ const formFields = [
   },
 ];
 
-function Form({ form, setForm }) {
+function Form() {
+  const { form, setForm, savePostsToDatabase } = useContext(Context);
   return (
     <div>
       <h1 className="h1Tag">
@@ -27,7 +29,7 @@ function Form({ form, setForm }) {
         Post
       </h1>
       <NavBar />
-      <form>
+      <form onSubmit={savePostsToDatabase}>
         {formFields.map((field) => (
           <div className="form1">
             <div>
@@ -47,7 +49,9 @@ function Form({ form, setForm }) {
             </div>
           </div>
         ))}
+
         <div className="CreatePostBtn">
+          {/* change type to submit for button submit so it also renders the submit function when clicked */}
           <button>Create New Post</button>
           <button>Cancel</button>
         </div>

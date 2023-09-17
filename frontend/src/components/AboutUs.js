@@ -11,16 +11,24 @@ function AboutUs() {
       <NavBar />
 
       <div>
+        <div>
+          <h2>
+            Twitter is an American online photo-sharing platform headquartered
+            in NY, founded by four amazing developers – in June 2023
+          </h2>
+        </div>
         <div className="CBox">
           <img
-            src="https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"
+            src="https://img.freepik.com/free-vector/young-woman-pink-dress-smiling_1450-140.jpg"
             alt=" pic of staff"
             className="Cimage"
           ></img>
           <h3>Wendy Wang</h3>
           <p className="Cpara">
-            Looking for someone with initiative and who is willing to step up to
-            the plate look no futher then her{" "}
+            Wendy is an accomplished full stack developer, with over 10 years of
+            experience. Today, Wendy is a faculty member at Harvard, Tufts, and
+            Boston University where she teaches advanced algorithms and prepares
+            students for after graduation.
           </p>
         </div>
 
