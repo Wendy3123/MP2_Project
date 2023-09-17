@@ -8,7 +8,10 @@ function PostItem({ item }) {
         <img src={img_URL} alt=" pic of staff" className="Postimage"></img>
         <h3>{author}</h3>
         <p className="Postpara">{caption}</p>
-        <button>edit</button>
+        <div>
+          <button className="PostItemBtnLeft">Edit</button>
+          <button className="PostItemBtnRight">Delete</button>
+        </div>
       </div>
     </div>
   );
