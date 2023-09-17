@@ -110,9 +110,9 @@ a {
 }
 
 .Postimage {
-  width: 210px;
+  width: 245px;
   height: 210px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .Postpara {
   display: flex;
