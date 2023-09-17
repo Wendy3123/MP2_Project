@@ -125,7 +125,12 @@ a {
 .PostItemBtnLeft {
   margin-right: 10px;
   margin-bottom: 10px;
-  background-color: #c262b5;
+  background-color: #e077d2;
+}
+.PostItemBtnMid {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #d22cb9;
 }
 
 .PostItemBtnRight {
