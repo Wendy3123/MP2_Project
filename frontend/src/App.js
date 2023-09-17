@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Post from "./pages/Post";
 import Home from "./components/Home";
 import AboutUs from "./components/AboutUs";
+import IndividualPost from "./pages/IndividualPost";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/AllPosts" element={<Post />} />
         <Route path="/CreateAPost" element={<Form />} />
+        <Route path="/AllPosts/:id" element={<IndividualPost />} />
       </Routes>
     </div>
   );

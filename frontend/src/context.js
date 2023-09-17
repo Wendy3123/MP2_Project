@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { createContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Context = createContext(null);
 
@@ -14,7 +14,9 @@ const GlobalState = ({ children }) => {
   const [form, setForm] = useState(initialState);
   const [posts, setPosts] = useState([]); //this will be empty array bc it will be all our post we will get getting
   const [isPostSavedSuccessfully, setIsPostSavedSuccessfully] = useState(false); //default value set to false first
+  const [individualPostInfo, setIndividualPostInfo] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   async function savePostsToDatabase(e) {
     e.preventDefault(); //prevent page from refreshing on any event happening
@@ -45,17 +47,33 @@ const GlobalState = ({ children }) => {
   }, [isPostSavedSuccessfully, navigate]);
 
   useEffect(() => {
-    async function getListOfPosts() {
-      const apiRes = await fetch("http://localhost:3000/AllPosts");
-      const result = await apiRes.json();
-      console.log(result);
-      if (result && result.length > 0) {
-        //if result is tru and result.length is greater than 0
-        setPosts(result);
+    if (location.pathname === "/AllPosts") {
+      setIsPostSavedSuccessfully(false);
+      async function getListOfPosts() {
+        const apiRes = await fetch("http://localhost:3000/AllPosts");
+        const result = await apiRes.json();
+        console.log(result);
+        if (result && result.length > 0) {
+          //if result is tru and result.length is greater than 0
+          setPosts(result);
+        }
       }
+      getListOfPosts();
     }
-    getListOfPosts();
-  }, [setPosts]); //the second argument is [] which menas on pageload it loads once and thats it
+  }, [setPosts, location]); //the second argument is [] which menas on pageload it loads once and thats it
+
+  async function IndividualPostInfoById(getCurrentId) {
+    const apiRes = await fetch(
+      `http://localhost:3000/AllPosts/${getCurrentId}`
+    );
+    const result = await apiRes.json();
+    console.log(result);
+
+    if (result) {
+      setIndividualPostInfo(result);
+      navigate(`/AllPosts/${getCurrentId}`);
+    }
+  }
 
   return (
     <Context.Provider
@@ -67,6 +85,8 @@ const GlobalState = ({ children }) => {
         isPostSavedSuccessfully,
         setIsPostSavedSuccessfully,
         savePostsToDatabase,
+        IndividualPostInfoById,
+        individualPostInfo,
       }}
     >
       {children}

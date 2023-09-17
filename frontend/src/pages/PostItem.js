@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../context";
 
 function PostItem({ item }) {
-  const { author, img_URL, caption } = item;
+  const { IndividualPostInfoById } = useContext(Context);
+  const { author, img_URL, caption, _id } = item; //we pass _id in here to so we can access the current id from mongodb
   return (
     <div className="PostContainer">
       <div className="PostBox">
@@ -9,7 +11,15 @@ function PostItem({ item }) {
         <h3>{author}</h3>
         <p className="Postpara">{caption}</p>
         <div>
-          <button className="PostItemBtnLeft">Edit</button>
+          <button
+            onClick={() => {
+              IndividualPostInfoById(_id);
+            }}
+            className="PostItemBtnLeft"
+          >
+            See Post
+          </button>
+          <button className="PostItemBtnMid">Edit</button>
           <button className="PostItemBtnRight">Delete</button>
         </div>
       </div>
