@@ -15,19 +15,25 @@ const GlobalState = ({ children }) => {
   const [posts, setPosts] = useState([]); //this will be empty array bc it will be all our post we will get getting
   const [isPostSavedSuccessfully, setIsPostSavedSuccessfully] = useState(false); //default value set to false first
   const [individualPostInfo, setIndividualPostInfo] = useState(null);
+  const [isEdit, setIsEdit] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
   async function savePostsToDatabase(e) {
     e.preventDefault(); //prevent page from refreshing on any event happening
-    const apiResponse = await fetch("http://localhost:3000/AllPosts", {
-      //enter port for backend server so our ex localhost:3000 not localhost:3001
-      method: "POST", //add the method post to create a single post
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(form), //change our form from unreadable to readable
-    });
+    const apiResponse = await fetch(
+      isEdit
+        ? `http://localhost:3000/AllPosts/${form._id}`
+        : "http://localhost:3000/AllPosts",
+      {
+        //enter port for backend server so our ex localhost:3000 not localhost:3001
+        method: isEdit ? "PUT" : "POST", //add the method post to create a single post
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(form), //change our form from unreadable to readable
+      }
+    );
 
     const result = await apiResponse.json(); //should be able to see results in mongodb
     console.log(result);
@@ -60,6 +66,8 @@ const GlobalState = ({ children }) => {
     if (location.pathname === "/AllPosts") {
       setIsPostSavedSuccessfully(false);
       getListOfPosts();
+      setForm(initialState);
+      setIsEdit(false);
     }
   }, [setPosts, location]); //the second argument is [] which menas on pageload it loads once and thats it
 
@@ -91,6 +99,13 @@ const GlobalState = ({ children }) => {
     }
   }
 
+  function editSinglePost(getCurrentItemData) {
+    console.log(getCurrentItemData);
+    setForm(getCurrentItemData);
+    navigate("/CreateAPost");
+    setIsEdit(true);
+  }
+
   return (
     <Context.Provider
       value={{
@@ -104,6 +119,8 @@ const GlobalState = ({ children }) => {
         IndividualPostInfoById,
         individualPostInfo,
         deleteSinglePost,
+        editSinglePost,
+        isEdit,
       }}
     >
       {children}
