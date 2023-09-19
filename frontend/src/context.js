@@ -16,6 +16,9 @@ const GlobalState = ({ children }) => {
   const [isPostSavedSuccessfully, setIsPostSavedSuccessfully] = useState(false); //default value set to false first
   const [individualPostInfo, setIndividualPostInfo] = useState(null);
   const [isEdit, setIsEdit] = useState(false);
+  const [currentPostDetailId, setCurrentPostDetailId] = useState(null);
+  const [isPostDetailDataFetching, setIsPostDetailDataFetching] =
+    useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -79,6 +82,7 @@ const GlobalState = ({ children }) => {
     console.log(result);
 
     if (result) {
+      setIsPostDetailDataFetching(false);
       setIndividualPostInfo(result);
       navigate(`/AllPosts/${getCurrentId}`);
     }
@@ -106,6 +110,14 @@ const GlobalState = ({ children }) => {
     setIsEdit(true);
   }
 
+  useEffect(() => {
+    if (currentPostDetailId !== null) {
+      IndividualPostInfoById(currentPostDetailId);
+    }
+  }, [currentPostDetailId]);
+
+  console.log(currentPostDetailId);
+
   return (
     <Context.Provider
       value={{
@@ -121,6 +133,8 @@ const GlobalState = ({ children }) => {
         deleteSinglePost,
         editSinglePost,
         isEdit,
+        isPostDetailDataFetching,
+        setCurrentPostDetailId,
       }}
     >
       {children}

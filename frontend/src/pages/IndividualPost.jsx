@@ -1,18 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../context";
 import NavBar from "../components/NavBar";
+import { CircularProgress } from "@mui/material";
+import { useParams } from "react-router-dom";
 
 function IndividualPost() {
-  const { individualPostInfo } = useContext(Context);
+  const {
+    individualPostInfo,
+    isPostDetailDataFetching,
+    setCurrentPostDetailId,
+  } = useContext(Context);
+
+  const params = useParams();
+  console.log(params);
+
+  const { id } = params;
+
+  useEffect(() => {
+    if (id !== "") setCurrentPostDetailId(id);
+  }, [id, setCurrentPostDetailId]);
+
+  if (isPostDetailDataFetching) {
+    return <CircularProgress />;
+  }
   const { author, img_URL, caption } = individualPostInfo;
 
   console.log(individualPostInfo);
   return (
     <div>
-      <h1 className="h1Tag">
-        <img src="./LOGO.png" alt="brand logo" className="logo"></img>Individual
-        Post
-      </h1>
+      <h1 className="h1Tag">Individual Post</h1>
       <NavBar />
 
       <div className="PostContainer">
