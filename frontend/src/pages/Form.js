@@ -52,8 +52,10 @@ function Form() {
 
         <div className="CreatePostBtn">
           {/* change type to submit for button submit so it also renders the submit function when clicked */}
-          <button>{isEdit ? "Add Edit" : "Create New Post"}</button>
-          <button>Cancel</button>
+          <button className="formbtn">
+            {isEdit ? "Add Edit" : "Create New Post"}
+          </button>
+          <button className="formbtncancel">Cancel</button>
         </div>
       </form>
     </div>

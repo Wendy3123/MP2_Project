@@ -137,3 +137,10 @@ a {
   background-color: #da2424;
   margin-bottom: 10px;
 }
+
+.formbtn {
+  background-color: #e077d2;
+}
+.formbtncancel {
+  background-color: #da2424;
+}
