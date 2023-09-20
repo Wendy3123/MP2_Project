@@ -82,7 +82,7 @@ a {
 
 .OutterFormBox {
   background-color: rgb(219, 107, 178);
-  margin: 2% 10% 0 10%;
+  margin: 3% 10% 0 10%;
   padding-bottom: 33px;
   border: 1px solid black;
   border-radius: 30px;
@@ -96,8 +96,8 @@ a {
   gap: 10px;
 }
 .CBox {
-  border: solid 3px rgb(173, 72, 165);
-  border-radius: 3px;
+  border: solid 3px rgb(9, 3, 9);
+  border-radius: 10px;
   padding-top: 10px;
   margin: 10px 10vw 10px 10vw;
 }
@@ -107,11 +107,11 @@ a {
 }
 .Cpara {
   font-size: 18px;
-  color: #93285d;
+  color: #771244;
 }
 
 .PostContainer {
-  border: solid rgb(173, 72, 165) 2px;
+  border: solid black 2px;
   display: inline-flex;
   flex-wrap: wrap;
   margin: 5vw;
@@ -151,4 +151,21 @@ a {
 }
 .formbtncancel {
   background-color: #da2424;
+}
+
+.postItems {
+  background-color: rgb(219, 107, 178);
+  width: 80vw;
+  margin: 3% 0 3% 10%;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.aboutusBox {
+  background-color: rgb(219, 107, 178);
+  width: 80vw;
+  margin: 3% 0 3% 10%;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding-bottom: 20px;
 }

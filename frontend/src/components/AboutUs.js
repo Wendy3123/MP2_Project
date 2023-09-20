@@ -5,17 +5,17 @@ function AboutUs() {
   return (
     <div>
       <h1 className="h1Tag">
-        <img src="./LOGO.png" alt="brand logo" className="logo"></img>Meet the
-        creators 👋🏼
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>TWITTER
       </h1>
       <NavBar />
 
-      <div>
+      <div className="aboutusBox">
+        <h1>Meet the creators 👋🏼</h1>
         <div>
-          <h2>
+          <h3>
             Twitter is an American online photo-sharing platform headquartered
             in NY, founded by four amazing developers – in June 2023
-          </h2>
+          </h3>
         </div>
         <div className="CBox">
           <img
