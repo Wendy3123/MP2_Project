@@ -11,13 +11,16 @@ function Post() {
   return (
     <div>
       <h1 className="h1Tag">
-        <img src="./LOGO.png" alt="brand logo" className="logo"></img>View All
-        Posts
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>
+        TWITTER
       </h1>
       <NavBar />
-      {posts && posts.length > 0
-        ? posts.map((item) => <PostItem item={item} />)
-        : null}
+      <div className="postItems">
+        <h1>View All Posts</h1>
+        {posts && posts.length > 0
+          ? posts.map((item) => <PostItem item={item} />)
+          : null}
+      </div>
     </div>
   );
 }
