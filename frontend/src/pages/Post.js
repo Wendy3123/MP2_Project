@@ -11,7 +11,8 @@ function Post() {
   return (
     <div>
       <h1 className="h1Tag">
-        <img src="./LOGO.png" alt="brand logo" className="logo"></img>View Posts
+        <img src="./LOGO.png" alt="brand logo" className="logo"></img>View All
+        Posts
       </h1>
       <NavBar />
       {posts && posts.length > 0

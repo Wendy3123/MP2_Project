@@ -89,7 +89,6 @@ const GlobalState = ({ children }) => {
   }
 
   async function deleteSinglePost(getCurrentId) {
-    console.log(getCurrentId);
     const apiRes = await fetch(
       `http://localhost:3000/AllPosts/${getCurrentId}`,
       {
