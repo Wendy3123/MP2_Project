@@ -16,16 +16,14 @@ A fun new app for social blogging
 
 ## Routes
 
-| method | path                          | purpose                                        |
-| :----- | :---------------------------- | :--------------------------------------------- |
-| GET    | /                             | Home Page                                      |
-| GET    | /posts                        | all posts index page                           |
-| POST   | /posts                        | creates new post                               |
-| GET    | /posts/new                    | Form page for creating a new post              |
-| GET    | /posts/:id                    | Details about a particular post                |
-| PUT    | /posts/:id                    | Update a particular post                       |
-| GET    | /posts/:id/edit               | Form page for editing an existing post         |
-| DELETE | /posts/:id                    | Delete a particular post                       |
-| POST   | /posts/:id/comment            | Create a comment about a particular post       |
-| DELETE | /posts/:id/comment/:commentId | Delete a comment about a particular post       |
-| GET    | \*                            | 404 page (matches any route not defined above) |
+| method | path             | purpose                                        |
+| :----- | :--------------- | :--------------------------------------------- |
+| GET    | /                | Home Page                                      |
+| GET    | /AllPosts        | all posts index page                           |
+| GET    | /AboutUs         | About us page                                  |
+| GET    | /CreateAPost     | Form page for creating a new post              |
+| GET    | /AllPosts/:id    | Details about a particular post                |
+| GET    | /AllPosts/:id    | View a specific post                           |
+| PUT    | /CreateAPost/:id | Form page for editing an existing post         |
+| DELETE | /AllPosts/:id    | Delete a particular post                       |
+| GET    | \*               | 404 page (matches any route not defined above) |
