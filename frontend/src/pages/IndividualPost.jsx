@@ -28,9 +28,9 @@ function IndividualPost() {
   console.log(individualPostInfo);
   return (
     <div>
-      <h1 className="h1Tag">Individual Post</h1>
+      <h1 className="h1Tag">TWITTER</h1>
       <NavBar />
-
+      <h1>POST #{id}</h1>
       <div className="PostContainer">
         <div className="PostBox">
           <img src={img_URL} alt=" pic of staff" className="Postimage"></img>
