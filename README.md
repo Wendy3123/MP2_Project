@@ -1,4 +1,4 @@
-# New-n-Improved TWITTER
+# TWIT-TER
 
 A fun new app for social blogging
 
