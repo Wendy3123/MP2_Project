@@ -17,14 +17,14 @@ A fun new app for social blogging
 
 ## Routes
 
-| method | path             | purpose                                        |
-| :----- | :--------------- | :--------------------------------------------- |
-| GET    | /                | Home Page                                      |
-| GET    | /AllPosts        | all posts index page                           |
-| GET    | /AboutUs         | About us page                                  |
-| GET    | /CreateAPost     | Form page for creating a new post              |
-| GET    | /AllPosts/:id    | Details about a particular post                |
-| GET    | /AllPosts/:id    | View a specific post                           |
-| PUT    | /CreateAPost/:id | Form page for editing an existing post         |
-| DELETE | /AllPosts/:id    | Delete a particular post                       |
-| GET    | \*               | 404 page (matches any route not defined above) |
+| method | path          | purpose                                        |
+| :----- | :------------ | :--------------------------------------------- |
+| GET    | /             | Home Page                                      |
+| GET    | /AllPosts     | all posts index page                           |
+| GET    | /AboutUs      | About us page                                  |
+| GET    | /CreateAPost  | Form page for creating a new post              |
+| GET    | /AllPosts/:id | Details about a particular post                |
+| GET    | /AllPosts/:id | View a specific post                           |
+| PUT    | /CreateAPost  | Form page for editing an existing post         |
+| DELETE | /AllPosts/:id | Delete a particular post                       |
+| GET    | \*            | 404 page (matches any route not defined above) |
