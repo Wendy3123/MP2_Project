@@ -111,7 +111,7 @@ a {
 }
 
 .PostContainer {
-  border: solid black 2px;
+  border: solid rgb(0, 0, 0) 3px;
   display: inline-flex;
   flex-wrap: wrap;
   margin: 1vw;
@@ -168,4 +168,8 @@ a {
   border: 1px solid black;
   border-radius: 30px;
   padding-bottom: 20px;
+}
+
+.individualpostId {
+  color: #d76ec9;
 }
