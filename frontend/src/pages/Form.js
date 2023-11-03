@@ -31,10 +31,7 @@ function Form() {
       <NavBar />
       <div className="OutterFormBox">
         <form onSubmit={savePostsToDatabase}>
-          <h1>
-            <img src="./LOGO.png" alt="brand logo" className="logo"></img>
-            {isEdit ? "Edit A Post" : "Create A Post"}
-          </h1>
+          <h1>{isEdit ? "Edit A Post" : "Create A Post"}</h1>
           {formFields.map((field) => (
             <div className="form1">
               <div>
@@ -60,7 +57,6 @@ function Form() {
             <button className="formbtn">
               {isEdit ? "Add Edit" : "Create New Post"}
             </button>
-            <button className="formbtncancel">Cancel</button>
           </div>
         </form>
       </div>

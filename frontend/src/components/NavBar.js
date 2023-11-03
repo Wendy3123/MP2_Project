@@ -5,6 +5,7 @@ const listStyle = {
   listStyle: "none",
   fontSize: "18px",
   display: "flex",
+  flexWrap: "wrap",
   gap: "8vw",
   justifyContent: "space-evenly",
   backgroundColor: "white",

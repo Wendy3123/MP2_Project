@@ -82,7 +82,7 @@ const GlobalState = ({ children }) => {
     console.log(result);
 
     if (result) {
-      setIsPostDetailDataFetching(false);
+      setIsPostDetailDataFetching(false); //if result==true
       setIndividualPostInfo(result);
       navigate(`/AllPosts/${getCurrentId}`);
     }
@@ -105,8 +105,8 @@ const GlobalState = ({ children }) => {
   function editSinglePost(getCurrentItemData) {
     console.log(getCurrentItemData);
     setForm(getCurrentItemData);
-    navigate("/CreateAPost");
-    setIsEdit(true);
+    navigate("/CreateAPost"); //we are using the createAPost page again to render the edit page
+    setIsEdit(true); //true to edit page because we clicked the edit button now we can use this true value to display the edit button and title
   }
 
   useEffect(() => {
