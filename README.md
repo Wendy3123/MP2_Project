@@ -1,7 +1,7 @@
 # TWIT-TER
 
 <img src='./frontend/public/LOGO.png' alt='logo pic' width=60px>
-A fun new app for social blogging
+A fun new app for social blogging!
 
 ## What we have to offer
 
