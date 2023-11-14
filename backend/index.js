@@ -5,6 +5,7 @@ const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
 const post = require("./models/post.js");
 const AllPostsController = require("./controllers/AllPosts_controller.js");
+const path = require("path");
 
 // CONFIGURATION
 require("dotenv").config();
@@ -16,6 +17,10 @@ app.use(bodyparser.json({ extended: true, limit: "20mb" }));
 app.use(bodyparser.urlencoded({ extended: true, limit: "20mb" }));
 app.use(cors());
 app.use("/AllPosts", AllPostsController); //to visit this page go to localhost:3000/AllPosts
+// serve static front end in production mode
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client", "build")));
+}
 
 // Create a homepage route.
 app.get("/", function (req, res) {
