@@ -26,8 +26,8 @@ const GlobalState = ({ children }) => {
     e.preventDefault(); //prevent page from refreshing on any event happening
     const apiResponse = await fetch(
       isEdit
-        ? `http://localhost:3000/AllPosts/${form._id}`
-        : "http://localhost:3000/AllPosts",
+        ? `${process.env.REACT_APP_SERVER_URL}AllPosts/${form._id}`
+        : `${process.env.REACT_APP_SERVER_URL}AllPosts`,
       {
         //enter port for backend server so our ex localhost:3000 not localhost:3001
         method: isEdit ? "PUT" : "POST", //add the method post to create a single post
@@ -56,7 +56,7 @@ const GlobalState = ({ children }) => {
   }, [isPostSavedSuccessfully, navigate]);
 
   async function getListOfPosts() {
-    const apiRes = await fetch("http://localhost:3000/AllPosts");
+    const apiRes = await fetch(`${process.env.REACT_APP_SERVER_URL}AllPosts`);
     const result = await apiRes.json();
     console.log(result);
     if (result && result.length > 0) {
@@ -76,7 +76,7 @@ const GlobalState = ({ children }) => {
 
   async function IndividualPostInfoById(getCurrentId) {
     const apiRes = await fetch(
-      `http://localhost:3000/AllPosts/${getCurrentId}`
+      `${process.env.REACT_APP_SERVER_URL}AllPosts/${getCurrentId}`
     );
     const result = await apiRes.json();
     console.log(result);
@@ -90,7 +90,7 @@ const GlobalState = ({ children }) => {
 
   async function deleteSinglePost(getCurrentId) {
     const apiRes = await fetch(
-      `http://localhost:3000/AllPosts/${getCurrentId}`,
+      `${process.env.REACT_APP_SERVER_URL}AllPosts/${getCurrentId}`,
       {
         method: "DELETE",
       }
